@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -41,5 +41,17 @@ export default function InfoBox({info}){
       </Card>
       </div>
         </div>
+    
     )
-}
+};
+InfoBox.propTypes = {
+  info: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+    temp: PropTypes.number.isRequired,
+    tempMax: PropTypes.number.isRequired,
+    tempMin: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
+    feelslike: PropTypes.number.isRequired,
+    weather: PropTypes.string.isRequired,
+  }).isRequired,
+};
