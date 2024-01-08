@@ -43,7 +43,7 @@ export default function InfoBox({info}){
         </div>
     
     )
-};
+}
 InfoBox.propTypes = {
   info: PropTypes.shape({
     city: PropTypes.string.isRequired,
